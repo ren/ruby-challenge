@@ -10,4 +10,4 @@ The returned object should also allow you to access attributes using method call
 
     data.genres.last.artists.first.albums.first.tracks.last.name => "But Not For Me"
 
-Bonus points for corresponding test suite.
+Bonus points for corresponding test suite and WIP commits to show your thought process.
