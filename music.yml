@@ -1,0 +1,38 @@
+genres:
+  - name: Classic Rock
+    artists:
+      - name: Bruce Sprinsteen
+        albums:
+        - name: Born to Run
+          tracks:
+            - name: Thunder Road
+            - name: Tenth Avenue Freeze Out
+            - name: Night
+            - name: Backstreets
+            - name: Born to Run
+            - name: She's the one
+            - name: Meeting Across The River
+            - name: Jungleland
+        - name: Nebraska
+          tracks:
+            - name: Nebraska
+            - name: Atlantic City
+            - name: Mansion on the Hill
+            - name: Johnny 99
+            - name: Highway Patrolman
+            - name: State Trooper
+            - name: Used Cars
+            - name: Open All Night
+            - name: My Father's House
+            - name: Reason to Believe
+  - name: Jazz
+    artists:
+      - name: John Coltrane
+        albums:
+        - name: My Favorite Things
+          tracks:
+            - name: My Favorite Things
+            - name: Every Time We Say Goodbye
+            - name: Summertime
+            - name: But Not For Me
+
