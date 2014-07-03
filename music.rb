@@ -1,8 +1,15 @@
-# Load the YAML ruby library
+# Load the YAML ruby library.
 require 'yaml'
 
-# Read our file.
-data = YAML::load(File.open('music.yml'))
+# Read our file, gives us a hash that fulfills first challenge requirement.
+data = YAML.load_file 'music.yml'
 
-# Let's see if that worked..
+# Modify hash to satisfy second challenge requirement.
+def data.method_missing(n)
+  self[n.to_s]
+end
+
+# Just some debugging.
 puts data.inspect
+puts data['genres']
+puts data.genres
