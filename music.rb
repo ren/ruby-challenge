@@ -2,9 +2,12 @@
 require 'yaml'
 
 # Read our file, gives us a hash that fulfills first challenge requirement.
+# Ruby's YAML library does all the heavy lifting for us.
 data = YAML.load_file 'music.yml'
 
 # Modify Hash class to satisfy second challenge requirement.
+# Essentially, if no method is defined passes argument to any hash as a value
+# So data.genres will yield the same output as data['genres'].
 class Hash
   def method_missing(meth)
     self[meth.to_s]
