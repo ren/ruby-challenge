@@ -1,9 +1,25 @@
 require 'yaml'
 require 'ostruct'
 
-data = OpenStruct.new(YAML.load_file('music.yml'))
+hashed_data = YAML.load_file('music.yml')
 
-#data will be returned as hash, so []operation works, but . operation does not
-puts data
-puts data["genres"].last["artists"].first["albums"].first["tracks"].last["name"]
-puts data.genres.last
+class IterativeStruct < OpenStruct
+	def initialize(hash=nil)
+    	@table = {}
+
+    	hash.each do |key,value|
+			@table[key.to_sym] = (value.class == Hash ? self.class.new(value) : value)
+    	end
+  	end
+
+  	def first
+  	end
+
+  	def last
+  	end
+end
+
+
+data = IterativeStruct.new(hashed_data)
+
+puts data.genres
